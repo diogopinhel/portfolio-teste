@@ -1,0 +1,174 @@
+body{
+    height: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #140e1a
+    
+    
+}
+
+#main-container{
+  margin-top: 250px;
+  height: 800px;
+  display: row;
+  justify-content: center;
+}
+h1.title-main{
+  display: flex;
+  text-align: center;
+  justify-content: center;  
+  font-size: 54px;
+}
+
+h1.title-main spantitle{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: title-main 0.5s ease-out forwards;
+  display:inline-block;
+   
+}
+
+h1.title-main spantitle:nth-of-type(0){
+  animation-delay: 1s;
+}
+
+@keyframes title-main{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+h3.subtitle-main{
+  font-size: 36px; 
+  text-align: center;
+}
+
+h3.subtitle-main spansubtitle{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: subtitle-main 0.5s ease-out forwards;
+  display:inline-block;
+   
+}
+h3.subtitle-main spansubtitle:nth-of-type(1){
+  animation-delay: 1.2s;
+}
+
+h3.subtitle-main spansubtitle:nth-of-type(2){
+  animation-delay: 2.2s;
+}
+
+h3.subtitle-main spansubtitle:nth-of-type(3){
+  animation-delay: 3.2s;
+}
+h3.subtitle-main spansubtitle:nth-of-type(4){
+  animation-delay: 4.2s;
+}
+
+@keyframes subtitle-main{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+
+#profile-container{
+color: white;
+display: flex;
+flex-direction: row;
+}
+
+#profile-text{
+    margin-left: 200px;
+
+}
+#profile-image{
+    height: 450px;
+    margin-left: 150px;
+
+}
+
+#about-me{
+    font-size: 34px; 
+
+}
+#profile-title{
+   font-size: 46px; 
+
+}
+
+#profile-bio{
+    font-size: 24px; 
+
+}
+
+.button {
+    --color: #00A97F;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+  }
+  
+  .button a {
+    text-decoration: none; /* Remover sublinhado do link */
+    color: inherit; /* Herdar a cor do texto do botão */
+  }
+  
+  .button::before,
+  .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+  }
+  
+  .button::before {
+    top: -1em;
+    left: -1em;
+  }
+  
+  .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+  
+  .button:hover::before,
+  .button:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+  
+  .button:hover {
+    color: rgb(10, 25, 30);
+  }
+  
+  .button:active {
+    filter: brightness(.8);
+  }
+   
+
+
+#skills{
+  margin-top: 100px;
+  text-align: center;
+}

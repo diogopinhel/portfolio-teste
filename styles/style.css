@@ -2,13 +2,26 @@ body{
     height: 100%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    background: #140e1a
+    background:  #1d1d24;
     
     
 }
 
+#baseboard-container{
+color: aqua;
+padding: 60px;
+margin-left: 60px;
+}
+
+#backgroud-img{
+  height: 100px;
+  width: 100px;
+}
+#baseboard-text{
+  font-size: 72px;
+}
 #main-container{
-  margin-top: 250px;
+  margin-top: 150px;
   height: 800px;
   display: row;
   justify-content: center;
@@ -77,17 +90,86 @@ h3.subtitle-main spansubtitle:nth-of-type(4){
 
 #profile-container{
 color: white;
-display: flex;
-flex-direction: row;
+
+}
+
+.box-img{
+  position: relative;
+  width: 450px;
+  height: 450px;
+  margin-left: 120px;
+  background-color: rgba(0, 0, 0, 5);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.box-img::before{
+  content: '';
+  position: absolute;
+  inset: -10px 140px;
+  background: linear-gradient(315deg,#00ccff,#d400d4);
+  animation: animate 4s linear infinite;
+
+
+}
+
+.box-img:hover::before{
+inset: -20px 0px;
+}
+
+@keyframes animate{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}
+
+.box-img::after
+{
+content: '';
+position: absolute;
+inset: 4px;
+background: #162052;
+border-radius: 50%;
+z-index: 1;
+}
+
+.img-container{
+  color: white;
+  position: absolute;
+  inset: 25px;
+  border: 4px solid #070a1c;
+  z-index: 3;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.box-img:hover .img-container img{
+  opacity: 0;
 }
 
 #profile-text{
-    margin-left: 200px;
-
-}
-#profile-image{
-    height: 450px;
-    margin-left: 150px;
+    margin-left: 650px;
+    margin-top: -450px;
+    width: 1000px;
 
 }
 
@@ -101,7 +183,8 @@ flex-direction: row;
 }
 
 #profile-bio{
-    font-size: 24px; 
+    font-size: 22px;
+    font-weight: 400; 
 
 }
 
@@ -191,4 +274,28 @@ flex-direction: row;
 .img-skills {
     width: 70px; /* ajuste conforme necessário */
     height: 70px; /* ajuste conforme necessário */
+}
+
+#projects-container{
+  
+}
+
+#project-texts{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+#projects-title{
+margin-top: 80px;
+}
+#projects-subtitle{
+  margin-top: 10px;
+font-size: 46px;
+color: #00A97F;
+}
+
+#projects-info{
+height: 1000px;
+
 }
